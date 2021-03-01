@@ -1,0 +1,17 @@
+<%- include("header") -%>
+<h3><img src="/images/lp.png" alt="Simply Easy Learning" height="90"  width="130">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List of Tweets.....</h3>
+
+<table>
+  <tr>
+    <th>Tweet ID</th>
+    <th>Tweet Data</th>
+  </tr>
+<% for (const twdata of model) { %>
+  <tr>
+    <th><%= twdata.Twit_ID_Orig %></th>  
+    <td>      <em>(<%= twdata.Twit_Value %>)</em></td>      
+  </tr>  
+  <% } %>
+</table>
+<%- include("footer") -%>
